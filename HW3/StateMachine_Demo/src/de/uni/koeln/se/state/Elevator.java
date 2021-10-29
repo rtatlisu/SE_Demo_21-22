@@ -18,7 +18,7 @@ public class Elevator{
 
     //Moving up	
 	if(current_Floor < dest_Floor) {
-		System.out.println(State.Moving_up);
+		System.out.println("State: " + State.Moving_up);
 		try 
 		{	
 			while(current_Floor != dest_floor) {
@@ -39,7 +39,7 @@ public class Elevator{
 	
 	//Moving down
 	else if (current_Floor > dest_Floor) {
-		System.out.println(State.Moving_down);
+		System.out.println("State: " + State.Moving_down);
 		try 
 		{
 			while(current_Floor != dest_floor) {
@@ -58,18 +58,29 @@ public class Elevator{
 	
 	//No movement
 	else if (current_Floor == dest_Floor) {
-		System.out.println("Person: 'I already seem to be on floor "+dest_Floor+"' *exiting*");
-	//	System.out.println("You are already on " + dest_Floor + "th floor.");
-	//	Main.main(null);
+		try 
+		{
+			Thread.sleep(1000);
+			System.out.println("'I already seem to be on floor " + dest_Floor + "' *exiting*");	
+		}
+		catch(InterruptedException ex) {
+		    Thread.currentThread().interrupt();
+		}
+		
 	}
+	
 	
 	  
 
  }
 
 	private void arrive_atFloor() {
-		System.out.println("*Ding* - arrived on floor " + current_Floor );
-		try {
+		try 
+		{   Thread.sleep(1000);
+		    System.out.println("State: " + State.Idle);
+		    Thread.sleep(1000);
+		    System.out.println("*Ding* - arrived on floor " + current_Floor );
+		
 			Thread.sleep(1000);
 			System.out.print("*exiting*");
 		}
