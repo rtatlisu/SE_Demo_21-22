@@ -12,7 +12,8 @@ public class Main {
 		 Scanner in = new Scanner(System.in); 
 		
 		System.out.println("Current Floor is 5"); 
-
+		
+		System.out.println("Idle");
 
 		System.out.println("Enter destination Floor: (0 to 10):"); 
 		 int dest_floor = in.nextInt(); 

@@ -58,7 +58,7 @@ public class Elevator{
 	
 	//No movement
 	else if (current_Floor == dest_Floor) {
-		System.out.println("Exiting");
+		System.out.println("Person: 'I already seem to be on floor "+dest_Floor+"' *exiting*");
 	//	System.out.println("You are already on " + dest_Floor + "th floor.");
 	//	Main.main(null);
 	}
@@ -68,7 +68,15 @@ public class Elevator{
  }
 
 	private void arrive_atFloor() {
-		System.out.println("*Ding* - arrived on floor " + current_Floor);
+		System.out.println("*Ding* - arrived on floor " + current_Floor );
+		try {
+			Thread.sleep(1000);
+			System.out.print("*exiting*");
+		}
+		catch(InterruptedException ex) {
+		    Thread.currentThread().interrupt();
+		}
+
 	}
 
 	
