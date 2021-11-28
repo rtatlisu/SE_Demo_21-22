@@ -1,5 +1,3 @@
-package de.uni.koeln.sse.se;
-
 public class Electronic implements HouseholdItem{
 	
 	String name;
@@ -61,6 +59,20 @@ public class Electronic implements HouseholdItem{
 
 	public void setFragile(Boolean fragile) {
 		this.fragile = fragile;}
+
+
+	@Override
+	public float movingCosts() {
+		System.out.print("Costs of moving " + this.name +": ");
+		return 0;
+	}
+
+
+	@Override
+	public String packagingInstruction() {
+		// TODO Auto-generated method stub
+		return this.name+" should be covered with Polyethylene foam film and packed in a box with dimensions: ";
+	}
 	
 	
 	

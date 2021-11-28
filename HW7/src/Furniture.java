@@ -1,4 +1,3 @@
-package de.uni.koeln.sse.se;
 
 public class Furniture implements HouseholdItem{
 	
@@ -64,6 +63,23 @@ public class Furniture implements HouseholdItem{
 
 	public void setName(String name) {
 		this.name = name;}
+
+
+
+	@Override
+	public float movingCosts() {
+		System.out.print("Costs of moving " + this.name +": ");
+		return 0;
+	}
+
+
+
+
+	@Override
+	public String packagingInstruction() {
+		// TODO Auto-generated method stub
+		return this.name+" should be covered with waterproof covers with an area of: ";
+	}
 
 	
 }
